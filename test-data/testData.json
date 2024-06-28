@@ -1,0 +1,9 @@
+{
+  "RegistrationDetails": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johndoetest@test.com",
+    "telephone": "639123456789",
+    "password": "John#doe%test123"
+  }
+}

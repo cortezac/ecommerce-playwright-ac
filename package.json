@@ -1,0 +1,14 @@
+{
+  "name": "ecommerce-playwright-ac",
+  "version": "1.0.0",
+  "description": "This project showcases the development and implementation of a comprehensive test automation suite using Playwright TypeScript for a realistic e-commerce website (https://ecommerce-playground.lambdatest.io/). The suite effectively validates various functionalities of the online store, ensuring a seamless user experience.",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.14.6"
+  }
+}
