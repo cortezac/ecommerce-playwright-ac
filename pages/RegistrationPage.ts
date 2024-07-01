@@ -62,8 +62,8 @@ export default class RegistrationPage {
   public async clickContinueButton() {
     await this.continueButton().click();
   }
-  //Journey
-  public async registrationJourney() {
+  //Scenario
+  public async registrationScenario() {
     await this.inputFirstName(testData.RegistrationDetails.firstName);
     await this.inputLastName(testData.RegistrationDetails.lastName);
     await this.inputEmail(testData.RegistrationDetails.email);
