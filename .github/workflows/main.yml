@@ -21,8 +21,8 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       # - name: Run Playwright tests
-      - name: Run Playwright tests with reporting
-        run: npx playwright test --project chromium --report=html --report-directory=playwright-report
+      - name: Run Playwright tests
+        run: npx playwright test --project chromium
         # run: npx playwright test --project chromium --grep '@register'
       - uses: actions/upload-artifact@v3
         if: always()
