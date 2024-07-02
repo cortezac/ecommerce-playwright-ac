@@ -12,16 +12,22 @@ export default class HomePage {
   }
 
   //Locators
-  myAccDropdown = () => this.page.locator("//li[@class='nav-item dropdown dropdown-hoverable']//span[contains(.,'My account')]");
-
-  //li//span[@class="title"][contains(.,'My account')]
-  loginButton = () => this.page.locator("//li[@class='nav-item dropdown dropdown-hoverable']//span[contains(.,'Login')]");
-  registerButton = () => this.page.locator("//li[@class='nav-item dropdown dropdown-hoverable']//span[contains(.,'Register')]");
+  addOndsDropdown = () => this.page.locator('//span[@class="title"][contains(.,"AddOns")]');
+  addOnsItem = (item: string) => this.page.getByRole("link", { name: `${item}` });
+  myAccountDropdown = () => this.page.locator('//span[@class="title"][contains(.,"My account")]');
+  myAccountItem = (item: string) => this.page.getByRole("link", { name: `${item}` });
+  megaMenuDropdown = () => this.page.locator('//span[@class="title"][contains(.,"Mega Menu")]');
+  dropDown = (dropdown: string) => this.page.locator(`//span[@class="title"][contains(.,'${dropdown}')]`); //generic locator for dropdown
+  menuItem = (item: string) => this.page.getByRole("link", { name: `${item}` }); // generic locator for item in dropdown
 
   //Actions
-  public async clickRegisterButton() {
-    await this.myAccDropdown().hover();
-    await this.page.waitForTimeout(3000);
-    await this.registerButton().click();
+  public async clickMegaMenuItem(item: string) {
+    await this.megaMenuDropdown().hover();
+    await this.menuItem(item).first().click();
+  }
+
+  public async clickDropDown(dropdown: string, item: string) {
+    await this.dropDown(dropdown).hover();
+    await this.menuItem(item).click();
   }
 }
